@@ -2,16 +2,151 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+  /* Neutrals */
+  --color-virgil: #fffafa;
+  --color-steam: #ccc8c8;
+  --color-steel: #6c6c6c;
+  --color-asphalt: #414141;
+  --color-coal: #0c0c0c;
+
+  /* Cherry */
+  --color-cherry-bold: #e71936;
+  --color-cherry-100: #ff9fa9;
+  --color-cherry-300: #cf4a5e;
+  --color-cherry-500: #a10037;
+  --color-cherry-700: #580e31;
+  --color-cherry-900: #37062a;
+
+  /* Tangerine */
+  --color-tangerine-bold: #ff791a;
+  --color-tangerine-100: #ffe692;
+  --color-tangerine-300: #ed811d;
+  --color-tangerine-500: #cf4302;
+  --color-tangerine-700: #751a03;
+  --color-tangerine-900: #440c07;
+
+  /* Forest */
+  --color-forest-bold: #48cb71;
+  --color-forest-100: #cae6b4;
+  --color-forest-300: #6ca062;
+  --color-forest-500: #37734b;
+  --color-forest-700: #204934;
+  --color-forest-900: #0f2a2a;
+
+  /* Cerulean */
+  --color-cerulean-bold: #2e4fff;
+  --color-cerulean-100: #81c0ff;
+  --color-cerulean-300: #4e76c5;
+  --color-cerulean-500: #212da8;
+  --color-cerulean-700: #16136f;
+  --color-cerulean-900: #080736;
+
+  /* Plum */
+  --color-plum-bold: #952cff;
+  --color-plum-100: #d1afff;
+  --color-plum-300: #8c5cd5;
+  --color-plum-500: #41169c;
+  --color-plum-700: #260371;
+  --color-plum-900: #170637;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-Extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-ExtralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-SemiboldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/src/fonts/GeneralSans-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@theme {
+  --font-sans: "General Sans", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "General Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
