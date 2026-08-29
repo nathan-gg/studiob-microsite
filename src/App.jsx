@@ -3,8 +3,8 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="min-h-screen bg-virgil font-medium">
+      <header className="App-header flex bg-cerulean-500">
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p class="text-red-600">
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +17,11 @@ function App() {
         >
           Learn React
         </a> */}
+        <img src={logo} className="App-logo" alt="logo" />
+        <p class="text-amber-500">hello</p>
       </header>
+      <div></div>
+      <footer></footer>
     </div>
   );
 }
