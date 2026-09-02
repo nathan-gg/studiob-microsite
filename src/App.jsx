@@ -25,7 +25,10 @@ import "./App.css";
 
 import DigitalClock from "./DigitalClock";
 
+import { useForm, ValidationError } from "@formspree/react";
+
 function App() {
+  const [state, handleSubmit] = useForm("xnpqdpyr");
   return (
     <div className="min-h-screen bg-virgil font-medium  tracking-tight text-coal ">
       <header className="App-header absolute top-0 flex lg:pt-10 w-full min-h-16 h-fit py-3 px-3 lg:px-8 justify-between text-virgil items-center ">
@@ -192,19 +195,27 @@ function App() {
       <footer className=" pb-[-2] lg:pt-75 pt-40 gap-12 h-fit lg:min-h-screen px-6 lg:px-8 flex flex-col justify-end bg-[radial-gradient(ellipse_1800px_1000px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]">
         <div className="flex lg:flex-row flex-col justify-between w-full gap-8 ">
           <div className="flex flex-row flex-nowrap  justify-between gap-3">
-            <form className="flex flex-col lg:flex-row flex-nowrap w-full lg:min-w-84 lg:justify-between gap-3 *:rounded-full">
+
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col lg:flex-row flex-nowrap w-full lg:min-w-84 lg:justify-between gap-3 *:rounded-full"
+            >
               <input
                 type="email"
                 id="email"
                 name="email"
+                required
                 placeholder="Ex. studiob@fromstudiob.ca"
                 className="px-6 py-3 w-full lg:min-w-90 placeholder:text-[16px] text-[16px] placeholder:leading-6 leading-6 lg:placeholder:text-2xl lg:text-2xl placeholder:text-center text-center  lg:placeholder:text-left lg:text-left lg:placeholder:leading-8 lg:leading-8 placeholder:align-middle align-middle placeholder:text-[#ccc8c880] text-nowrap text-virgil outline-1 outline-virgil"
               />
-              <input
+              <ValidationError field="email" errors={state.errors} />
+              <button
                 type="submit"
-                value="Let's Talk!"
-                className="px-6 py-3 text-[20px] leading-7 lg:text-[24px] lg:leading-8 text-center bg-[#6c6c6c80] rounded-full w-full lg:w-fit outline-2 text-virgil outline-[#ccc8c84d] cursor-pointer hover:bg-virgil hover:text-coal"
-              />
+                disabled={state.submitting}
+                className="px-6 py-3 text-[20px] leading-7 lg:text-[24px] lg:leading-8 text-center bg-[#6c6c6c80] rounded-full w-full lg:w-fit outline-2 text-virgil outline-[#ccc8c84d] cursor-pointer hover:bg-virgil hover:text-coal text-nowrap"
+              >
+                {state.succeeded ? "Sent!" : "Let's Talk!"}
+              </button>
             </form>
           </div>
           <div className="flex flex-row flex-nowrap justify-between gap-3 text-virgil *:lg:text-2xl *:text-4xl *:bg-[#6c6c6c80] *:rounded-full *:w-fit *:text-center *:outline-2 *:outline-[#ccc8c84d] *:p-4 ">
