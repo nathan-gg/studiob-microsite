@@ -126,10 +126,10 @@ function App() {
           </p>
         </div>
         <div className="flex flex-col lg:flex-row w-full gap-6 ">
-          <div className="flex flex-col w-full gap-2 max-w-140">
+          <div className="flex flex-col w-full gap-2 lg:max-w-140 ">
             <img
               src={bankmentThumbnail}
-              className=" w-full rounded-lg"
+              className="w-full rounded-lg "
               alt="logo"
             />
             <p className="">
