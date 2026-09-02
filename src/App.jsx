@@ -44,7 +44,7 @@ function App() {
 
           <a
             className="text-[16px] leading-6 pr-7 lg:text-2xl lg:leading-8 px-6 py-2 outline-1 lg:outline-2 text-center align-center outline-virgil rounded-full w-fit hover:bg-virgil hover:text-coal"
-            href="/"
+            href="mailto:connectwithstudiob@gmail.com"
             rel="noopener noreferrer"
           >
             Contact
@@ -195,7 +195,6 @@ function App() {
       <footer className=" pb-[-2] lg:pt-75 pt-40 gap-12 h-fit lg:min-h-screen px-6 lg:px-8 flex flex-col justify-end bg-[radial-gradient(ellipse_1800px_1000px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]">
         <div className="flex lg:flex-row flex-col justify-between w-full gap-8 ">
           <div className="flex flex-row flex-nowrap  justify-between gap-3">
-
             <form
               onSubmit={handleSubmit}
               className="flex flex-col lg:flex-row flex-nowrap w-full lg:min-w-84 lg:justify-between gap-3 *:rounded-full"
