@@ -206,10 +206,10 @@ function App() {
             </div>
           </div>
           <div className="flex lg:justify-between flex-col lg:flex-row gap-6 ">
-            <p className="sm:text-[28px] sm:leading-9 lg:text-[36px] lg:leading-11 text-[20px] leading-7 ">
+            <p className="sm:text-[28px] sm:leading-9 lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
               How did we start?
             </p>
-            <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex  md:max-w-130  lg:max-w-150 2xl:max-w-280 2xl:w-full  ">
+            <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex  md:max-w-130  lg:max-w-150 2xl:max-w-280 2xl:w-full">
               <p>
                 We began as students in a collaborative studio at SFU. Studio B symbolizes our love of collaboration, and ability to design impactful user experiences.
               </p>
