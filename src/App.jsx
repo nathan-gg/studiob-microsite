@@ -158,11 +158,11 @@ function App() {
       </div>
 
       <div className="about h-fit px-3 lg:px-8 py-12 lg:py-15 gap-12 flex-col flex ">
-        <div className="flex lg:justify-between flex-col lg:flex-row gap-6">
+        <div className="flex lg:justify-between flex-col lg:flex-row gap-6 b">
           <p className="sm:text-[28px] sm:leading-9 lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
             What do we specialize in?
           </p>
-          <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex flex-col gap-2 lg:gap-3">
+          <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex flex-col gap-2 lg:gap-3  max-w-150">
             <p>User Interface</p>
             <p>Web Development</p>
             <p>User Experience</p>
@@ -171,11 +171,11 @@ function App() {
             <p>Motion Graphics</p>
           </div>
         </div>
-        <div className="flex lg:justify-between flex-col lg:flex-row gap-6">
+        <div className="flex lg:justify-between flex-col lg:flex-row gap-6 ">
           <p className="sm:text-[28px] sm:leading-9 lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
             How did we start?
           </p>
-          <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex ">
+          <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex max-w-150 ">
             <p>
               We began as students in a collaborative studio at SFU Surrey
               Campus. To us, Studio B symbolizes our ability to passionately
