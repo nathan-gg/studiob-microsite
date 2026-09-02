@@ -35,8 +35,8 @@ function App() {
         <a className="App-link  h-7" href="/" rel="noopener noreferrer">
           <img src={headerLogo} className="h-7" alt="logo" />
         </a>
-        <div className=" text-2xl leading-8 w-fit h-fit flex items-center flex-row gap-5">
-          <span className="hidden lg:flex gap-2 items-center text-steam">
+        <div className=" sm:text-[16px] sm:leading-6 lg:text-2xl lg:leading-8 w-fit h-fit flex items-center flex-row sm:gap-2 lg:gap-5">
+          <span className="hidden sm:flex gap-2 items-center text-steam">
             <p classname="text-nowrap">Vancouver, BC</p>
             <img src={steamAsterisk} className=" w-2" alt="logo" />
             <DigitalClock />
@@ -74,7 +74,7 @@ function App() {
           </video>
         </div>
       </div> */}
-      <div className="showreel  bg-[url('./assets/hero-bg.png')] bg-cover bg-center h-fit lg:min-h-screen w-full flex justify-center items-center">
+      <div className="showreel mb-12 lg:mb-15 bg-[url('./assets/hero-bg.png')] bg-cover bg-center h-fit lg:min-h-screen w-full flex justify-center items-center">
         <div className="flex w-full h-fit lg:h-full px-3 py-16 lg:px-60 lg:py-30 justify-between items-center gap-3 lg:gap-8 *:rounded-lg ">
           <video
             className="flex-1 min-w-0 h-auto aspect-9/16 object-cover "
@@ -106,8 +106,8 @@ function App() {
         </div>
       </div>
 
-      <div className="mission py-12 lg:py-15 px-3 lg:px-8 text-[20px]  lg:text-5xl max-w-7xl ">
-        <p className="leading-7 lg:leading-14">
+      <div className="mission py-12 lg:py-15 px-3 lg:px-8 text-[20px] sm:text-[28px]  lg:text-5xl max-w-7xl ">
+        <p className="leading-7 sm:leading-9 lg:leading-14">
           <span className="text-cherry-500">Studio B</span> is a design agency
           comprised of 5 designers, whose work with industry leaders spans
           UX/UI, brand, marketing and digital. With every project, we bring{" "}
@@ -118,7 +118,7 @@ function App() {
           for our clients.
         </p>
       </div>
-      <div className="projects min-h-screen py-12 lg:py-15 px-3 lg:px-8 flex-col flex gap-6 text-[16px] leading-6 lg:leading-8 lg:text-2xl">
+      <div className="projects py-12 lg:py-15 px-3 lg:px-8 flex-col flex gap-6 text-[16px] leading-6 sm:text-[20px] sm:leading-7 lg:leading-8 lg:text-2xl">
         <div className="flex flex-col w-full gap-2">
           <img src={RBCThumbnail} className=" w-full rounded-lg" alt="logo" />
           <p className="">
@@ -126,7 +126,7 @@ function App() {
           </p>
         </div>
         <div className="flex flex-col lg:flex-row w-full gap-6 ">
-          <div className="flex flex-col w-full gap-2 lg:max-w-140 ">
+          <div className="flex flex-col  gap-2 w-full lg:w-2/5 ">
             <img
               src={bankmentThumbnail}
               className="w-full rounded-lg "
@@ -142,7 +142,7 @@ function App() {
               </a>
             </p>
           </div>
-          <div className="flex flex-col w-full gap-2">
+          <div className="flex flex-col gap-2 w-full lg:w-3/5">
             <img src={IMThumbnail} className=" w-full rounded-lg" alt="logo" />
             <p className="">
               Creating a bold web identity for{" "}
@@ -157,12 +157,12 @@ function App() {
         </div>
       </div>
 
-      <div className="about h-fit lg:min-h-screen px-3 lg:px-8 py-12 lg:py-15 gap-24 flex-col flex">
+      <div className="about h-fit px-3 lg:px-8 py-12 lg:py-15 gap-12 flex-col flex ">
         <div className="flex lg:justify-between flex-col lg:flex-row gap-6">
-          <p className="lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
+          <p className="sm:text-[28px] sm:leading-9 lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
             What do we specialize in?
           </p>
-          <div className="lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex flex-col gap-2 lg:gap-3">
+          <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex flex-col gap-2 lg:gap-3">
             <p>User Interface</p>
             <p>Web Development</p>
             <p>User Experience</p>
@@ -172,10 +172,10 @@ function App() {
           </div>
         </div>
         <div className="flex lg:justify-between flex-col lg:flex-row gap-6">
-          <p className="lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
+          <p className="sm:text-[28px] sm:leading-9 lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
             How did we start?
           </p>
-          <div className="lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex ">
+          <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex ">
             <p>
               We began as students in a collaborative studio at SFU Surrey
               Campus. To us, Studio B symbolizes our ability to passionately
@@ -185,19 +185,24 @@ function App() {
         </div>
       </div>
 
-      <div className="coming-soon h-fit lg:min-h-screen px-3 lg:px-8 py-12 lg:py-15 flex flex-col gap-3 lg:gap-6 ">
+      <div className="coming-soon h-fit px-3 lg:px-8 py-12 lg:py-15 flex flex-col gap-3 lg:gap-6 ">
         <img src={team} className=" w-full" alt="logo" />
-        <p className="text-asphalt text-[16px] leading-6 lg:leading-10 lg:text-[32px]">
+        <p className="text-asphalt sm:text-[20px] sm:leading-7 text-[16px] leading-6 lg:leading-10 lg:text-[32px]">
           Currently hard at work constructing our full site,{" "}
           <span className="text-cherry-500">coming very soon!</span>
         </p>
       </div>
-      <footer className=" pb-[-2] lg:pt-75 pt-40 gap-12 h-fit lg:min-h-screen px-6 lg:px-8 flex flex-col justify-end bg-[radial-gradient(ellipse_1800px_1000px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]">
+      <footer
+        className=" pb-[-2] lg:pt-75 pt-40 gap-12 h-fit px-6 lg:px-8 flex flex-col justify-end
+      bg-[radial-gradient(ellipse_900px_700px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]
+      lg:bg-[radial-gradient(ellipse_1800px_1000px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]
+      2xl:bg-[radial-gradient(ellipse_2700px_1500px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]"
+      >
         <div className="flex lg:flex-row flex-col justify-between w-full gap-8 ">
           <div className="flex flex-row flex-nowrap  justify-between gap-3">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col lg:flex-row flex-nowrap w-full lg:min-w-84 lg:justify-between gap-3 *:rounded-full"
+              className="flex flex-col sm:flex-row flex-nowrap w-full lg:min-w-84 lg:justify-between gap-3 *:rounded-full"
             >
               <input
                 type="email"
@@ -205,19 +210,20 @@ function App() {
                 name="email"
                 required
                 placeholder="Ex. studiob@fromstudiob.ca"
-                className="px-6 py-3 w-full lg:min-w-90 placeholder:text-[16px] text-[16px] placeholder:leading-6 leading-6 lg:placeholder:text-2xl lg:text-2xl placeholder:text-center text-center  lg:placeholder:text-left lg:text-left lg:placeholder:leading-8 lg:leading-8 placeholder:align-middle align-middle placeholder:text-[#ccc8c880] text-nowrap text-virgil outline-1 outline-virgil"
+                className="px-6 py-3 w-full sm:min-w-90 sm:w-fit  placeholder:text-[16px] text-[16px] placeholder:leading-6 leading-6 sm:placeholder:text-2xl sm:text-2xl placeholder:text-center text-center  lg:placeholder:text-left lg:text-left sm:placeholder:leading-8 sm:leading-8
+                 placeholder:align-middle align-middle placeholder:text-[#ccc8c880] text-nowrap text-virgil outline-1 outline-virgil"
               />
               <ValidationError field="email" errors={state.errors} />
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="px-6 py-3 text-[20px] leading-7 lg:text-[24px] lg:leading-8 text-center bg-[#6c6c6c80] rounded-full w-full lg:w-fit outline-2 text-virgil outline-[#ccc8c84d] cursor-pointer hover:bg-virgil hover:text-coal text-nowrap"
+                className="px-6 py-3 text-[20px] leading-7 sm:text-[24px] sm:leading-8 text-center bg-[#6c6c6c80] rounded-full w-full sm:w-fit outline-2 text-virgil outline-[#ccc8c84d] cursor-pointer hover:bg-virgil hover:text-coal text-nowrap"
               >
                 {state.succeeded ? "Sent!" : "Let's Talk!"}
               </button>
             </form>
           </div>
-          <div className="flex flex-row flex-nowrap justify-between gap-3 text-virgil *:lg:text-2xl *:text-4xl *:bg-[#6c6c6c80] *:rounded-full *:w-fit *:text-center *:outline-2 *:outline-[#ccc8c84d] *:p-4 ">
+          <div className="flex flex-row flex-nowrap justify-between sm:justify-start gap-3 text-virgil *:lg:text-2xl *:text-4xl *:bg-[#6c6c6c80] *:rounded-full *:w-fit *:text-center *:outline-2 *:outline-[#ccc8c84d] *:p-4 ">
             <a
               className="hover:bg-virgil hover:text-steel"
               href="https://www.linkedin.com/company/from-studio-b/posts/?feedView=all"

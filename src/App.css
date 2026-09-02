@@ -1,22 +1,9 @@
-/* html {
+html {
   overscroll-behavior-y: none;
-} */
-
-/* body {
-  background-color: #e71936;
-} */
-
-html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
 }
 
-#root {
-  height: 100%;
-  overflow-y: auto;
-  overscroll-behavior-y: none;
-  -webkit-overflow-scrolling: touch;
+body {
+  background-color: #fffafa;
 }
 
 .App {

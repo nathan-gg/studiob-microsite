@@ -52,7 +52,7 @@ function DigitalClock() {
   }
 
   return (
-    <div className="clock flex justify-between min-w-fit w-40 ">
+    <div className="clock flex justify-between min-w-fit sm:w-28 lg:w-40 ">
       <span className="tabular-nums ">
         {formatDigits()} {formatMeridiem()} {getTimezoneAbbr()}
       </span>
