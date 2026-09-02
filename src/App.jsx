@@ -2,11 +2,25 @@
 import footerLogo from "./assets/footer-logo.svg";
 import headerLogo from "./assets/header-logo.svg";
 import asterisk from "./assets/asterisk.svg";
+import whiteAsterisk from "./assets/white-asterisk.svg";
+import steamAsterisk from "./assets/steam-asterisk.svg";
 import filler from "./assets/filler.png";
+import heroFiller from "./assets/hero-filler.png";
+import heroBG from "./assets/hero-bg.png";
 import bankmentFiller from "./assets/bankment-filler.png";
 import RBCFiller from "./assets/rbc-filler.png";
+import RBCThumbnail from "./assets/rbc-thumbnail.png";
+import IMThumbnail from "./assets/im-thumbnail.png";
+import bankmentThumbnail from "./assets/bankment-thumbnail.png";
 import team from "./assets/team.png";
 import GBLanding from "./assets/green-basil-landing.png";
+
+import heroBaldy from "./assets/hero-baldy.mp4";
+import heroBamigbaddie from "./assets/hero-bamigbaddie.mp4";
+import heroGlian from "./assets/hero-glian.mp4";
+
+import { Icon } from "@iconify/react";
+
 import "./App.css";
 
 import DigitalClock from "./DigitalClock";
@@ -14,112 +28,217 @@ import DigitalClock from "./DigitalClock";
 function App() {
   return (
     <div className="min-h-screen bg-virgil font-medium  tracking-tight text-coal ">
-      <header className="App-header sticky top-0 flex h-16 py-3 px-60 justify-between items-center ">
+      <header className="App-header absolute top-0 flex lg:pt-10 w-full min-h-16 h-fit py-3 px-3 lg:px-8 justify-between text-virgil items-center ">
         <a className="App-link  h-7" href="/" rel="noopener noreferrer">
           <img src={headerLogo} className="h-7" alt="logo" />
         </a>
-        <div className=" text-2xl leading-8 h-fit flex flex-row gap-2">
-          <p classname="">Vancouver, BC</p>
-          <img src={asterisk} className=" w-2" alt="logo" />
-          <DigitalClock/>
+        <div className=" text-2xl leading-8 w-fit h-fit flex items-center flex-row gap-5">
+          <span className="hidden lg:flex gap-2 items-center text-steam">
+            <p classname="text-nowrap">Vancouver, BC</p>
+            <img src={steamAsterisk} className=" w-2" alt="logo" />
+            <DigitalClock />
+          </span>
+
+          <a
+            className="text-[16px] leading-6 pr-7 lg:text-2xl lg:leading-8 px-6 py-2 outline-1 lg:outline-2 text-center align-center outline-virgil rounded-full w-fit hover:bg-virgil hover:text-coal"
+            href="/"
+            rel="noopener noreferrer"
+          >
+            Contact
+          </a>
         </div>
       </header>
-      <div className="showreel h-[calc(100vh-64px)] px-60 py-15">
-        <img src={filler} className=" w-full" alt="logo" />
+      {/* <div className="showreel pb-12 lg:pb-15 bg-[url('./assets/hero-bg.png')] bg-cover bg-center min-h-screen w-full flex justify-center items-center">
+      
+
+        <div className="flex w-full h-full px-60 py-30 justify-between items-center *:rounded-lg">
+          <video
+            width="315"
+            height="560"
+            className=""
+            autoPlay
+            muted
+            playsInline
+            loop
+          >
+            <source src={heroBamigbaddie} type="video/mp4" />
+          </video>
+          <video width="315" height="560" autoPlay muted playsInline loop>
+            <source src={heroBaldy} type="video/mp4" />
+          </video>
+          <video width="315" height="560" autoPlay muted playsInline loop>
+            <source src={heroGlian} type="video/mp4" />
+          </video>
+        </div>
+      </div> */}
+      <div className="showreel  bg-[url('./assets/hero-bg.png')] bg-cover bg-center h-fit lg:min-h-screen w-full flex justify-center items-center">
+        <div className="flex w-full h-fit lg:h-full px-3 py-16 lg:px-60 lg:py-30 justify-between items-center gap-3 lg:gap-8 *:rounded-lg ">
+          <video
+            className="flex-1 min-w-0 h-auto aspect-9/16 object-cover "
+            autoPlay
+            muted
+            playsInline
+            loop
+          >
+            <source src={heroBamigbaddie} type="video/mp4" />
+          </video>
+          <video
+            className="flex-1 min-w-0 h-auto aspect-9/16 object-cover"
+            autoPlay
+            muted
+            playsInline
+            loop
+          >
+            <source src={heroBaldy} type="video/mp4" />
+          </video>
+          <video
+            className="flex-1 min-w-0 h-auto aspect-9/16 object-cover"
+            autoPlay
+            muted
+            playsInline
+            loop
+          >
+            <source src={heroGlian} type="video/mp4" />
+          </video>
+        </div>
       </div>
-      <div className="mission min-h-screen py-15 px-60 text-5xl [&_p]:uppercase">
-        <p>We are a design agency comprised of </p>
-        <p>
-          <span className="bg-[linear-gradient(90deg,#FF9FA9_0%,#E71936_37%,#260371_100%)] bg-clip-text text-transparent">
-            5 designers,
+
+      <div className="mission py-12 lg:py-15 px-3 lg:px-8 text-[20px]  lg:text-5xl max-w-7xl ">
+        <p className="leading-7 lg:leading-14">
+          <span className="text-cherry-500">Studio B</span> is a design agency
+          comprised of 5 designers, whose work with industry leaders spans
+          UX/UI, brand, marketing and digital. With every project, we bring{" "}
+          <span className="text-cherry-500">
+            bespoke solutions, bold approaches, bona-fide communication and
+            boundless growth
           </span>{" "}
-          whose work with{" "}
-          <span className="bg-[linear-gradient(90deg,#B3D499_0%,#48CB71_51%,#37734B_100%)] bg-clip-text text-transparent">
-            industry leaders
-          </span>{" "}
-          spans{" "}
-          <span className="bg-[linear-gradient(90deg,#FFE692_0%,#FFC972_0%,#FF791A_29%,#CF4302_100%)] bg-clip-text text-transparent">
-            UX/UI, brand and digital.
-          </span>
+          for our clients.
         </p>
-        <br></br>
-        <p>With every project we bring</p>
-        <p className="text-cherry-bold">bespoke solutions</p>
-        <p className="text-cherry-bold">bold approaches</p>
-        <p className="text-cherry-bold">bona-fide communication</p>
-        <p className="text-cherry-bold">& boundless growth.</p>
-        <br></br>
-        <p>We are Studio B.</p>
       </div>
-      <div className="projects min-h-screen py-15 px-60 flex-col flex gap-6">
+      <div className="projects min-h-screen py-12 lg:py-15 px-3 lg:px-8 flex-col flex gap-6 text-[16px] leading-6 lg:leading-8 lg:text-2xl">
         <div className="flex flex-col w-full gap-2">
-          <img src={RBCFiller} className=" w-full rounded-xl" alt="logo" />
-          <p className="text-xl">
-            Creating a brand new banking experience for RBC customers
+          <img src={RBCThumbnail} className=" w-full rounded-lg" alt="logo" />
+          <p className="">
+            Reimagining the Interac e-Transfer experience for mobile bankers
           </p>
         </div>
-        <div className="flex flex-row w-full gap-6">
-          <div className="flex flex-col w-full gap-2">
+        <div className="flex flex-col lg:flex-row w-full gap-6 ">
+          <div className="flex flex-col w-full gap-2 max-w-140">
             <img
-              src={bankmentFiller}
-              className=" w-full rounded-xl"
+              src={bankmentThumbnail}
+              className=" w-full rounded-lg"
               alt="logo"
             />
-            <p className="text-xl">Bringing in the New Year with BANKMENT</p>
+            <p className="">
+              Bringing in the New Year with{" "}
+              <a
+                href="https://www.instagram.com/bankment_/"
+                className="text-cherry-500 hover:underline"
+              >
+                BANKMENT
+              </a>
+            </p>
           </div>
           <div className="flex flex-col w-full gap-2">
-            <img src={GBLanding} className=" w-full rounded-xl" alt="logo" />
-            <p className="text-xl">
-              Revitalizing Green Basil Restaurant’s Web Identity
+            <img src={IMThumbnail} className=" w-full rounded-lg" alt="logo" />
+            <p className="">
+              Creating a bold web identity for{" "}
+              <a
+                href="https://www.industrymediagroup.ca/"
+                className="text-cherry-500 hover:underline"
+              >
+                Industry Media Group
+              </a>
             </p>
           </div>
         </div>
       </div>
-      <div className="about min-h-screen px-60 py-15 ">
-        <img src={team} className=" w-full" alt="logo" />
+
+      <div className="about h-fit lg:min-h-screen px-3 lg:px-8 py-12 lg:py-15 gap-24 flex-col flex">
+        <div className="flex lg:justify-between flex-col lg:flex-row gap-6">
+          <p className="lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
+            What do we specialize in?
+          </p>
+          <div className="lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex flex-col gap-2 lg:gap-3">
+            <p>User Interface</p>
+            <p>Web Development</p>
+            <p>User Experience</p>
+            <p>Brand Systems and Strategy</p>
+            <p>Digital Marketing</p>
+            <p>Motion Graphics</p>
+          </div>
+        </div>
+        <div className="flex lg:justify-between flex-col lg:flex-row gap-6">
+          <p className="lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
+            How did we start?
+          </p>
+          <div className="lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex ">
+            <p>
+              We began as students in a collaborative studio at SFU Surrey
+              Campus. To us, Studio B symbolizes our ability to passionately
+              collaborate, and design impactful user experiences.
+            </p>
+          </div>
+        </div>
       </div>
-      <footer className="about pb-[-2] h-fit pt-15 gap-6 bg-[linear-gradient(#FFFAFA_0%,#FF9FA9_34%,#E71936_73%,#A10037_100%)] flex flex-col justify-end items-center">
-        <div className="flex flex-col gap-3 w-fit">
+
+      <div className="coming-soon h-fit lg:min-h-screen px-3 lg:px-8 py-12 lg:py-15 flex flex-col gap-3 lg:gap-6 ">
+        <img src={team} className=" w-full" alt="logo" />
+        <p className="text-asphalt text-[16px] leading-6 lg:leading-10 lg:text-[32px]">
+          Currently hard at work constructing our full site,{" "}
+          <span className="text-cherry-500">coming very soon!</span>
+        </p>
+      </div>
+      <footer className=" pb-[-2] lg:pt-75 pt-40 gap-12 h-fit lg:min-h-screen px-6 lg:px-8 flex flex-col justify-end bg-[radial-gradient(ellipse_1800px_1000px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]">
+        <div className="flex lg:flex-row flex-col justify-between w-full gap-8 ">
           <div className="flex flex-row flex-nowrap  justify-between gap-3">
-            <form className="flex flex-row flex-nowrap justify-between gap-3">
+            <form className="flex flex-col lg:flex-row flex-nowrap w-full lg:min-w-84 lg:justify-between gap-3 *:rounded-full">
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Sign up to learn more"
-                className="p-2 pl-3 w-full  text-nowrap bg-steam rounded outline-none"
+                placeholder="Ex. studiob@fromstudiob.ca"
+                className="px-6 py-3 w-full lg:min-w-90 placeholder:text-[16px] text-[16px] placeholder:leading-6 leading-6 lg:placeholder:text-2xl lg:text-2xl placeholder:text-center text-center  lg:placeholder:text-left lg:text-left lg:placeholder:leading-8 lg:leading-8 placeholder:align-middle align-middle placeholder:text-[#ccc8c880] text-nowrap text-virgil outline-1 outline-virgil"
               />
               <input
                 type="submit"
-                value="Submit"
-                className="p-2 text-center bg-steam rounded cursor-pointer"
+                value="Let's Talk!"
+                className="px-6 py-3 text-[20px] leading-7 lg:text-[24px] lg:leading-8 text-center bg-[#6c6c6c80] rounded-full w-full lg:w-fit outline-2 text-virgil outline-[#ccc8c84d] cursor-pointer hover:bg-virgil hover:text-coal"
               />
             </form>
           </div>
-          <div className="flex flex-row flex-nowrap justify-between gap-3 text-cherry-500 *:outline-1 *:outline-cherry-500 ">
+          <div className="flex flex-row flex-nowrap justify-between gap-3 text-virgil *:lg:text-2xl *:text-4xl *:bg-[#6c6c6c80] *:rounded-full *:w-fit *:text-center *:outline-2 *:outline-[#ccc8c84d] *:p-4 ">
             <a
-              className="p-2 w-full text-center   rounded"
-              href="https://www.instagram.com/fromstudiob"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-            {/* <a
-              className="p-2 w-full text-center  rounded"
-              href="https://www.instagram.com/fromstudiob"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a> */}
-            <a
-              className="p-2 w-full text-center  rounded"
+              className="hover:bg-virgil hover:text-steel"
               href="https://www.linkedin.com/company/from-studio-b/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              <Icon icon="eva:email-fill" />
+            </a>
+            <a
+              className="hover:bg-virgil hover:text-steel]"
+              href="https://www.instagram.com/fromstudiob"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon icon="akar-icons:instagram-fill" />
+            </a>
+            {/* <a
+              className="hover:bg-virgil hover:text-steel"
+              href="https://www.x.com/fromstudiob"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon icon="ant-design:twitter-outlined" />
+            </a> */}
+            <a
+              className="hover:bg-virgil hover:text-steel"
+              href="https://www.linkedin.com/company/from-studio-b/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon icon="akar-icons:linkedin-fill" />
             </a>
           </div>
         </div>

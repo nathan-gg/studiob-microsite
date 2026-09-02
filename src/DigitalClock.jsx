@@ -1,42 +1,3 @@
-// import react, { useState, useEffect } from "react";
-
-// function DigitalClock() {
-//   const [time, setTime] = useState(new Date());
-
-//   useEffect(() => {
-//     const intervalId = setInterval(() => {
-//       setTime(new Date());
-//     }, 1000);
-
-//     return () => {
-//       clearInterval(intervalId);
-//     };
-//   }, []);
-
-//   function formatTime() {
-//     let hours = time.getHours();
-//     const minutes = time.getMinutes();
-//     const seconds = time.getSeconds();
-//     const meridiem = hours >= 12 ? "PM" : "AM";
-
-//     hours = hours % 12 || 12;
-
-//     // return `${hours}:${minutes} ${meridiem}`
-//     return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiem}`;
-//   }
-
-//   function padZero(number) {
-//     return (number < 10 ? "0" : "") + number;
-//   }
-
-//   return (
-//     <div className="clock">
-//       <span>{formatTime()}</span>
-//     </div>
-//   );
-// }
-// export default DigitalClock;
-
 import react, { useState, useEffect } from "react";
 
 function DigitalClock() {
@@ -52,19 +13,38 @@ function DigitalClock() {
     };
   }, []);
 
-  function formatDigits() {
-    let hours = time.getHours();
-    const minutes = time.getMinutes();
-    const seconds = time.getSeconds();
+  function getVancouverParts() {
+    const formatter = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Vancouver",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: false,
+    });
 
-    hours = hours % 12 || 12;
+    const parts = formatter.formatToParts(time);
+    const partMap = {};
+    parts.forEach(({ type, value }) => {
+      partMap[type] = value;
+    });
+
+    return {
+      hours: parseInt(partMap.hour, 10),
+      minutes: parseInt(partMap.minute, 10),
+      seconds: parseInt(partMap.second, 10),
+    };
+  }
+
+  function formatDigits() {
+    const { hours: rawHours, minutes } = getVancouverParts();
+    const hours = rawHours % 12 || 12;
 
     return `${padZero(hours)}:${padZero(minutes)}`;
-    // return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
   }
 
   function formatMeridiem() {
-    return time.getHours() >= 12 ? "PM" : "AM";
+    const { hours } = getVancouverParts();
+    return hours >= 12 ? "PM" : "AM";
   }
 
   function padZero(number) {
@@ -72,14 +52,21 @@ function DigitalClock() {
   }
 
   return (
-    // for time with seconds
-    // <div className="clock flex justify-between min-w-fit  w-33 ">
-
-    // for time without seconds
-    <div className="clock flex justify-between min-w-fit w-25 ">
-      <span className="tabular-nums ">{formatDigits()}</span>
-      <span>{formatMeridiem()}</span>
+    <div className="clock flex justify-between min-w-fit w-40 ">
+      <span className="tabular-nums ">
+        {formatDigits()} {formatMeridiem()} {getTimezoneAbbr()}
+      </span>
     </div>
   );
 }
+
+function getTimezoneAbbr() {
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Vancouver",
+    timeZoneName: "short",
+  });
+  const parts = formatter.formatToParts(new Date());
+  return parts.find((p) => p.type === "timeZoneName")?.value ?? "";
+}
+
 export default DigitalClock;
