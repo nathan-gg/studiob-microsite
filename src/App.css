@@ -2,11 +2,15 @@ html {
   overscroll-behavior-y: none;
 }
 
-/* input[type="search"] {
+body {
+  background-color: #e71936;
+}
+
+input[type="search"] {
   -webkit-appearance: none;
   appearance: none;
-  background: #e71936; 
-} */
+  background: #e71936;
+}
 
 .App {
   /* text-align: center; */
