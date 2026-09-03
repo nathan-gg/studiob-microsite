@@ -261,13 +261,21 @@ function App() {
                 </button>
               </form>
             </div>
-            <div className="flex flex-row flex-nowrap justify-between sm:justify-start gap-3 text-virgil *:lg:text-2xl *:text-4xl *:bg-[#6c6c6c80] *:rounded-full *:w-fit *:text-center *:outline-2 *:outline-[#ccc8c84d] *:p-4 *:hover:outline-none *:transition-all *:duration-100">
+            <div className="flex flex-row flex-nowrap justify-between sm:justify-start gap-3 text-virgil lg:*:text-2xl text-xl *:bg-[#6c6c6c80] *:rounded-full *:w-fit *:text-center *:outline-2 *:outline-[#ccc8c84d] *:p-3 lg:*:p-4 *:hover:outline-none *:transition-all *:duration-100">
               <a
                 className="hover:bg-virgil hover:text-steel"
                 href="mailto:connectwithstudiob@gmail.com"
                 rel="noopener noreferrer"
               >
                 <Icon icon="eva:email-fill" />
+              </a>
+              <a
+                className="hover:bg-virgil hover:text-steel"
+                href="https://www.linkedin.com/company/from-studio-b/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon icon="akar-icons:linkedin-fill" />
               </a>
               <a
                 className="hover:bg-virgil hover:text-steel"
@@ -285,14 +293,14 @@ function App() {
               >
                 <Icon icon="bi:twitter-x" />
               </a>
-              <a
+              {/* <a
                 className="hover:bg-virgil hover:text-steel"
-                href="https://www.linkedin.com/company/from-studio-b/posts/?feedView=all"
+                href="https://www.tiktok.com/fromstudiob"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon icon="akar-icons:linkedin-fill" />
-              </a>
+                <Icon icon="akar-icons:tiktok-fill" />
+              </a> */}
             </div>
           </div>
           <img
