@@ -211,7 +211,9 @@ function App() {
             </p>
             <div className="sm:text-[40px] sm:leading-12 lg:text-5xl lg:leading-14 text-[28px] leading-9 lg:w-4xl flex  md:max-w-130  lg:max-w-150 2xl:max-w-280 2xl:w-full">
               <p>
-                We began as students in a collaborative studio at SFU. Studio B symbolizes our love of collaboration, and ability to design impactful user experiences.
+                We began as students in a collaborative studio at SFU. Studio B
+                symbolizes our love of collaboration, and ability to design
+                impactful user experiences.
               </p>
             </div>
           </div>
@@ -228,7 +230,7 @@ function App() {
           className=" pb-[-2] lg:pt-75 pt-40 gap-12 h-fit px-6 lg:px-8 flex flex-col justify-end
       bg-[radial-gradient(ellipse_900px_700px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]
       lg:bg-[radial-gradient(ellipse_1800px_1000px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]
-      2xl:bg-[radial-gradient(ellipse_2700px_1500px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]"
+      2xl:bg-[radial-gradient(ellipse_4000px_1500px_at_bottom,#E71936_0%,#16136F_70%,#080736_80%,#0C0C0C_100%)]"
         >
           <div className="flex lg:flex-row flex-col justify-between w-full gap-8 ">
             <div className="flex flex-row flex-nowrap  justify-between gap-3">
@@ -242,24 +244,27 @@ function App() {
                   name="email"
                   required
                   placeholder="Ex. studiob@fromstudiob.ca"
-                  className="px-6 py-3 w-full sm:min-w-90 sm:w-fit  placeholder:text-[16px] text-[16px] placeholder:leading-6 leading-6 sm:placeholder:text-2xl sm:text-2xl placeholder:text-center text-center  lg:placeholder:text-left lg:text-left sm:placeholder:leading-8 sm:leading-8
+                  className="px-6 py-3 w-full sm:min-w-90 sm:w-fit  placeholder:text-[16px] text-[16px] placeholder:leading-6 leading-6 sm:placeholder:text-2xl sm:text-2xl placeholder:text-left text-left  lg:placeholder:text-left lg:text-left sm:placeholder:leading-8 sm:leading-8
                  placeholder:align-middle align-middle placeholder:text-[#ccc8c880] text-nowrap text-virgil outline-1 outline-virgil"
                 />
                 <ValidationError field="email" errors={state.errors} />
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="px-6 py-3 text-[20px] leading-7 sm:text-[24px] sm:leading-8 text-center bg-[#6c6c6c80] rounded-full w-full sm:w-fit outline-2 text-virgil outline-[#ccc8c84d] cursor-pointer hover:bg-virgil hover:text-coal hover:outline-none transition-all duration-100 text-nowrap"
+                  className={`px-6 py-3 text-[20px] leading-7 sm:text-[24px] sm:leading-8 text-center  rounded-full w-full sm:w-fit outline-2 outline-[#ccc8c84d] cursor-pointer transition-all duration-100 text-nowrap lg:w-70 ${
+                    state.succeeded
+                      ? " outline-virgil bg-virgil text-coal outline-none"
+                      : "bg-[#6c6c6c80] text-virgil hover:outline-none hover:bg-virgil hover:text-coal"
+                  }`}
                 >
-                  {state.succeeded ? "Sent!" : "Let's Talk!"}
+                  {state.succeeded ? "Joined!" : "Join our Mailing List!"}
                 </button>
               </form>
             </div>
             <div className="flex flex-row flex-nowrap justify-between sm:justify-start gap-3 text-virgil *:lg:text-2xl *:text-4xl *:bg-[#6c6c6c80] *:rounded-full *:w-fit *:text-center *:outline-2 *:outline-[#ccc8c84d] *:p-4 *:hover:outline-none *:transition-all *:duration-100">
               <a
                 className="hover:bg-virgil hover:text-steel"
-                href="https://www.linkedin.com/company/from-studio-b/posts/?feedView=all"
-                target="_blank"
+                href="mailto:connectwithstudiob@gmail.com"
                 rel="noopener noreferrer"
               >
                 <Icon icon="eva:email-fill" />
@@ -272,14 +277,14 @@ function App() {
               >
                 <Icon icon="akar-icons:instagram-fill" />
               </a>
-              {/* <a
-              className="hover:bg-virgil hover:text-steel"
-              href="https://www.x.com/fromstudiob"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon icon="ant-design:twitter-outlined" />
-            </a> */}
+              <a
+                className="hover:bg-virgil hover:text-steel"
+                href="https://www.x.com/fromstudiob"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon icon="bi:twitter-x" />
+              </a>
               <a
                 className="hover:bg-virgil hover:text-steel"
                 href="https://www.linkedin.com/company/from-studio-b/posts/?feedView=all"
