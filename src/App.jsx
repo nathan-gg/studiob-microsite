@@ -87,7 +87,7 @@ function App() {
             {/* <img src={headerLogo} className="h-7 sm:-mt-1" alt="logo" /> */}
           </a>
           <a
-            className={`text-[16px] leading-6 lg:text-2xl lg:leading-10 px-3 py-1 lg:px-6 lg:py-2 outline-1 lg:outline-2 text-center self-center justify-center rounded-xl transition-all duration-200 w-fit lg:min-h-14 ${
+            className={`text-[16px] leading-7 pr-3.5 lg:text-2xl lg:leading-10 px-3 py-1 lg:px-6 lg:py-2 outline-1 lg:outline-2 text-center self-center justify-center rounded-xl transition-all duration-200 w-fit lg:min-h-14 ${
               scrollY > window.innerHeight
                 ? "outline-coal text-coal hover:text-virgil hover:bg-coal "
                 : "bg-[#6c6c6c80] hover:bg-virgil hover:text-coal outline-none"
@@ -243,7 +243,11 @@ function App() {
         </div>
 
         <div class="h-fit px-3 lg:px-8 ">
-          <img src={team} className="rounded-lg w-full" alt="logo" />
+          <img
+            src={team}
+            className="rounded-sm sm:rounded-lg w-full"
+            alt="logo"
+          />
         </div>
 
         <div className="about h-fit px-3 lg:px-8 pt-12 lg:py-15 gap-12 flex-col flex ">
@@ -251,7 +255,7 @@ function App() {
             <p className="sm:text-[28px] sm:leading-9 lg:text-[36px] lg:leading-11 text-[20px] leading-7 text-asphalt">
               What We Do Best
             </p>
-            <div className="sm:text-[40px] sm:leading-12 lg:text-[40px] lg:leading-12 text-[28px] leading-9 lg:w-4xl flex flex-col gap-2 lg:gap-3  max-w-150 2xl:max-w-280 2xl:w-full">
+            <div className="sm:text-[40px] sm:leading-12 lg:text-[40px] lg:leading-12 text-[20px] leading-7 lg:w-4xl flex flex-col gap-2 lg:gap-3  max-w-150 2xl:max-w-280 2xl:w-full">
               <p>User Interface</p>
               <p>Web Development</p>
               <p>User Experience</p>
@@ -277,7 +281,7 @@ function App() {
         <div className="projects pt-12 lg:pt-15 px-3 lg:px-8 flex-col flex gap-6 text-[16px] leading-6 sm:text-[20px] sm:leading-7 lg:leading-8 lg:text-2xl">
           <div className="flex flex-col w-full gap-2">
             <video
-              className="flex-1 min-w-0 object-cover rounded-lg"
+              className="flex-1 min-w-0 object-cover rounded-sm sm:rounded-lg"
               autoPlay
               muted
               playsInline
@@ -300,7 +304,7 @@ function App() {
           <div className="flex flex-col lg:flex-row w-full gap-6 ">
             <div className="flex flex-col  gap-2 h-fit w-full lg:w-2/5 ">
               <video
-                className="flex-1 min-w-0 h-4/5 object-cover rounded-lg"
+                className="flex-1 min-w-0 h-4/5 object-cover rounded-sm sm:rounded-lg"
                 autoPlay
                 muted
                 playsInline
@@ -323,7 +327,7 @@ function App() {
             </div>
             <div className="flex flex-col gap-2 w-full lg:w-3/5">
               <video
-                className="flex-1 min-w-0 h-auto object-cover rounded-lg"
+                className="flex-1 min-w-0 h-auto object-cover rounded-sm sm:rounded-lg"
                 autoPlay
                 muted
                 playsInline
